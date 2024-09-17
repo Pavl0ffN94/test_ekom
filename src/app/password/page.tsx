@@ -17,7 +17,7 @@ export default function Password() {
 
     if (length > maxLength) {
       setError(`Длина пароля не должна превышать ${maxLength} символов.`);
-      return null; // Early return if error
+      return null;
     }
 
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -61,7 +61,7 @@ export default function Password() {
             type='number'
             className={styles.input_number}
             value={length}
-            onChange={e => setLength(Number(e.target.value))} // Parse input as number
+            onChange={e => setLength(Number(e.target.value))}
             min='1'
           />
 
